@@ -1,3 +1,4 @@
+package Snak3;
 
 public class Snak3Game {
 
