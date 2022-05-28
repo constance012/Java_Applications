@@ -1,4 +1,4 @@
-package Snak3
+package Snak3;
 
 import javax.swing.JFrame;
 
