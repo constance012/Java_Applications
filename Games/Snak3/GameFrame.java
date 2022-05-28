@@ -1,3 +1,5 @@
+package Snak3
+
 import javax.swing.JFrame;
 
 public class GameFrame extends JFrame {
