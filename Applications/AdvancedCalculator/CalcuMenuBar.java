@@ -3,12 +3,12 @@ package AdvancedCalculator;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 
 import javax.swing.ButtonGroup;
 import javax.swing.JCheckBoxMenuItem;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
-import javax.swing.JTextField;
 
 public class CalcuMenuBar extends JMenuBar implements ActionListener {
 	private JMenu settingMn, viewMn;  // Main menus.
@@ -47,6 +47,14 @@ public class CalcuMenuBar extends JMenuBar implements ActionListener {
 		angleGr = new ButtonGroup();
 		trigoGr = new ButtonGroup();
 		
+		// Set Mnemonic for these main menus.
+		settingMn.setMnemonic(KeyEvent.VK_S);
+		viewMn.setMnemonic(KeyEvent.VK_V);
+		
+		modeMn.setMnemonic(KeyEvent.VK_M);
+		angleMn.setMnemonic(KeyEvent.VK_A);
+		trigoMn.setMnemonic(KeyEvent.VK_T);
+		
 		// Register listeners.
 		stdMode.addActionListener(this);
 		scntfcMode.addActionListener(this);
@@ -71,6 +79,7 @@ public class CalcuMenuBar extends JMenuBar implements ActionListener {
 		settingMn.add(angleMn);
 		viewMn.add(trigoMn);
 		
+		// Add menus into this menu bar.
 		this.add(settingMn);
 		this.add(viewMn);
 		
